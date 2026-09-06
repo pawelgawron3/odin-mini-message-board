@@ -1,5 +1,18 @@
 import express from "express";
 
+const messages = [
+  {
+    user: "Amando",
+    text: "Hi there!",
+    added: new Date(),
+  },
+  {
+    user: "Charles",
+    text: "Hello World!",
+    added: new Date(),
+  },
+];
+
 const app = express();
 
 const PORT = process.env.PORT || 8080;
