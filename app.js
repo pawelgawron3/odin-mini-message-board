@@ -13,6 +13,10 @@ app.get("/", (req, res) => {
   res.send("Hello from server!");
 });
 
+app.get("/new", (req, res) => {
+  res.send("New message form route.");
+});
+
 app.listen(PORT, (err) => {
   if (err) throw err;
 
