@@ -1,17 +1,6 @@
 import express from "express";
-
-const messages = [
-  {
-    user: "Amando",
-    text: "Hi there!",
-    added: new Date(),
-  },
-  {
-    user: "Charles",
-    text: "Hello World!",
-    added: new Date(),
-  },
-];
+import indexRouter from "./routes/indexRouter.js";
+import messageRouter from "./routes/messageRouter.js";
 
 const app = express();
 
@@ -22,13 +11,9 @@ app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.render("index", { title: "Mini Messageboard", messages });
-});
+app.use("/", indexRouter);
 
-app.get("/new", (req, res) => {
-  res.send("New message form route.");
-});
+app.use("/new", messageRouter);
 
 app.listen(PORT, (err) => {
   if (err) throw err;
