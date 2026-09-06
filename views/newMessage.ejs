@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messageboard project | Message form</title>
+    <link rel="shortcut icon" href="/top_favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <form method="POST" action="/">
+      <h1><%= title %></h1>
+
+      <label for="messageUser">
+        <input name="messageUser" id="messageUser" type="text" required />
+      </label>
+      <label for="messageText">
+        <input name="messageText" id="messageText" type="text" required />
+      </label>
+
+      <button type="submit">Add a message</button>
+    </form>
+  </body>
+</html>
