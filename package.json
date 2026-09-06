@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/pawelgawron3/odin-mini-message-board/issues"
   },
-  "homepage": "https://github.com/pawelgawron3/odin-mini-message-board#readme"
+  "homepage": "https://github.com/pawelgawron3/odin-mini-message-board#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
 }
