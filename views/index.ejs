@@ -6,5 +6,15 @@
     <link rel="shortcut icon" href="/top_favicon.svg" type="image/svg+xml" />
     <title>Messageboard project</title>
   </head>
-  <body></body>
+  <body>
+    <%= title %>
+    
+    <% messages.forEach((message) => { %>
+      <div class="messageDiv">
+        <p class="user"><%= message.user %></p>
+        <p class="text"><%= message.text %></p>
+        <p class="date"><%= message.added %></p>
+      </div>
+    <% }) %>
+  </body>
 </html>

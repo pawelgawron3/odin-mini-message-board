@@ -23,7 +23,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.send("Hello from server!");
+  res.render("index", { title: "Mini Messageboard", messages });
 });
 
 app.get("/new", (req, res) => {
