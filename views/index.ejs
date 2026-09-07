@@ -14,6 +14,7 @@
         <p class="user"><%= message.user %></p>
         <p class="text"><%= message.text %></p>
         <p class="date"><%= message.added %></p>
+        <a href="/messageDetails/<%= message.id %>" class="details">Open message details</a>
       </div>
     <% }) %>
 
